@@ -13,6 +13,10 @@
 <html>
 <head>
 <title>Home</title>
+<navi>
+    <a href="/">home</a>
+    <a href="/test">test</a>
+</navi>
 </head>
 <body>
 </body>

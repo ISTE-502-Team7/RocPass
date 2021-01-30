@@ -8,9 +8,8 @@
         public static function load()
         {
             Router::post('/addAttendee', function(Request $req, Response $res){
-                // $post = Posts::add($req->getJSON());
-                // $res->status(201)->toJSON($post);
-                echo "Sweet!"; 
+                
+                echo "It Works!!"; 
         
             });
         }

@@ -11,7 +11,14 @@
 
 <!DOCTYPE html>
 <html>
-<head>Test</head>
+<head>
+<title>Test</title>
+<navi>
+    <a href="/">home</a>
+    <a href="/test">test</a>
+</navi>
+</head>
+
 <body>
 </body>
 </html>
