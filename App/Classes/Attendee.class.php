@@ -33,20 +33,20 @@
             
         }
 
-        // function read()
-        // {
+        function read()
+        {
 
-        // }
+        }
 
-        // function update()
-        // {
+        function update()
+        {
 
-        // }
+        }
 
-        // function delete()
-        // {
+        function delete()
+        {
 
-        // }
+        }
     }
 
 ?>

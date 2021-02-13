@@ -19,6 +19,7 @@
                 
                  (new Views\Test())->loadBody();
              });
+
         }
     }
 

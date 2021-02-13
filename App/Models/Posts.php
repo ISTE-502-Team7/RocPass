@@ -31,7 +31,7 @@
 
         public static function load()
         {
-            $DB_PATH = Config::get('DB_PATH', __DIR__.'/../../db.json');
+            $DB_PATH = Config::get('DB_PATH', __DIR__.'../../db.json');
             self::$DATA = json_decode(file_get_contents($DB_PATH));
         }
 

@@ -4,7 +4,7 @@
     {
         public function loadBody()
         {
-            
+            echo "<h1><b>Testing</b></h1>";
         }
     }
 ?>
