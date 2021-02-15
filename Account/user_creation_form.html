@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+    User Creation
+</title>
+</head>
+
+<body>
+    <form action="create_user.php" method="POST">
+
+        <h1>User Creation</h1>
+
+        <p> First Name:
+            <input type="text" name="first_name" placeholder="Required" />
+        </p>
+ 
+        <p> Last Name:
+            <input type="text" name="last_name" placeholder="Required" />
+        </p>
+
+        <p> Username:
+            <input type="text" name="username" placeholder="Required" />
+        </p>
+
+
+        <p> Email Address:
+            <input type="text" name="email" placeholder="Required" />
+        </p>
+
+        <p> Date of Birth:
+            <input type="date" name="bday" placeholder="birthday" />
+        </p>
+
+        <p> Gender:
+            <select style="width:5em;" name="gender" size="1" id="gender">
+                <option value="Select">Select</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+        </p>
+
+        <p> Nationality:
+            <input type="text" name="nationality" placeholder="Required" />
+        </p>
+
+        <p> Number of House Members: 
+            <select style="width:5em;" name="num_house_members" id="num_house_members">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </p>
+
+        <input type="submit" value="Create Account" />
+
+    </form>
+</body>
+
+</html>
