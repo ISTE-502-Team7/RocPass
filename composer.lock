@@ -4,8 +4,145 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "195f1b6e7179b83699cc7962e278a058",
+    "content-hash": "491b5e069cee66c12db2985ba2022992",
     "packages": [
+        {
+            "name": "byjg/jwt-session",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/byjg/jwt-session.git",
+                "reference": "fc85b8e6dd21ad69b05e820d07830c0e95a485b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/byjg/jwt-session/zipball/fc85b8e6dd21ad69b05e820d07830c0e95a485b1",
+                "reference": "fc85b8e6dd21ad69b05e820d07830c0e95a485b1",
+                "shasum": ""
+            },
+            "require": {
+                "byjg/jwt-wrapper": "2.0.*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*|7.4.*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ByJG\\Session\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Gilberto Magalhães",
+                    "email": "joao@byjg.com.br"
+                }
+            ],
+            "description": "JwtSession is a PHP session replacement. Instead of use FileSystem, just use JWT TOKEN. The implementation following the SessionHandlerInterface.",
+            "support": {
+                "issues": "https://github.com/byjg/jwt-session/issues",
+                "source": "https://github.com/byjg/jwt-session/tree/master"
+            },
+            "time": "2019-10-02T10:23:04+00:00"
+        },
+        {
+            "name": "byjg/jwt-wrapper",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/byjg/jwt-wrapper.git",
+                "reference": "6618613cd15fd31e473fc862b452882a677379dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/byjg/jwt-wrapper/zipball/6618613cd15fd31e473fc862b452882a677379dd",
+                "reference": "6618613cd15fd31e473fc862b452882a677379dd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "firebase/php-jwt": "^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*|7.4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ByJG\\Util\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A very simple wrapper for create, encode, decode JWT Tokens and abstract the PHP JWT Component",
+            "support": {
+                "issues": "https://github.com/byjg/jwt-wrapper/issues",
+                "source": "https://github.com/byjg/jwt-wrapper/tree/master"
+            },
+            "time": "2019-11-19T02:53:31+00:00"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8 <=9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/firebase/php-jwt/issues",
+                "source": "https://github.com/firebase/php-jwt/tree/v5.2.1"
+            },
+            "time": "2021-02-12T00:02:00+00:00"
+        },
         {
             "name": "monolog/monolog",
             "version": "1.25.1",
@@ -94,12 +231,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/propelorm/Propel2.git",
-                "reference": "79ed1686de9c601517b8212d07e638d00d766dd9"
+                "reference": "394a6cea5e96e9dbbdeec40ea46b7f1e64693b12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/propelorm/Propel2/zipball/79ed1686de9c601517b8212d07e638d00d766dd9",
-                "reference": "79ed1686de9c601517b8212d07e638d00d766dd9",
+                "url": "https://api.github.com/repos/propelorm/Propel2/zipball/394a6cea5e96e9dbbdeec40ea46b7f1e64693b12",
+                "reference": "394a6cea5e96e9dbbdeec40ea46b7f1e64693b12",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +299,7 @@
                 "issues": "https://github.com/propelorm/Propel2/issues",
                 "source": "https://github.com/propelorm/Propel2/tree/master"
             },
-            "time": "2021-01-28T12:58:45+00:00"
+            "time": "2021-02-09T09:41:03+00:00"
         },
         {
             "name": "psr/container",
@@ -275,12 +412,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "deef1331cfcda4e85ed155e7833de7bf7ec36ea1"
+                "reference": "0611ba1ace7e6168b670b041ee5cffce58bb1440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/deef1331cfcda4e85ed155e7833de7bf7ec36ea1",
-                "reference": "deef1331cfcda4e85ed155e7833de7bf7ec36ea1",
+                "url": "https://api.github.com/repos/symfony/config/zipball/0611ba1ace7e6168b670b041ee5cffce58bb1440",
+                "reference": "0611ba1ace7e6168b670b041ee5cffce58bb1440",
                 "shasum": ""
             },
             "require": {
@@ -346,7 +483,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-14T15:42:36+00:00"
+            "time": "2021-02-15T18:55:04+00:00"
         },
         {
             "name": "symfony/console",
@@ -354,12 +491,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "56d4c04ca6069c93857c7335a626dbe747fa82d4"
+                "reference": "539148499aaafa5058d534582f61ce2a66480987"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/56d4c04ca6069c93857c7335a626dbe747fa82d4",
-                "reference": "56d4c04ca6069c93857c7335a626dbe747fa82d4",
+                "url": "https://api.github.com/repos/symfony/console/zipball/539148499aaafa5058d534582f61ce2a66480987",
+                "reference": "539148499aaafa5058d534582f61ce2a66480987",
                 "shasum": ""
             },
             "require": {
@@ -444,7 +581,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-28T22:09:26+00:00"
+            "time": "2021-02-18T11:02:40+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -520,12 +657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "4ff1d2e04790e021941a9bcbed5aca383f8250da"
+                "reference": "b84b3a9461a96e295e3c452caae277450f89fcbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/4ff1d2e04790e021941a9bcbed5aca383f8250da",
-                "reference": "4ff1d2e04790e021941a9bcbed5aca383f8250da",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b84b3a9461a96e295e3c452caae277450f89fcbe",
+                "reference": "b84b3a9461a96e295e3c452caae277450f89fcbe",
                 "shasum": ""
             },
             "require": {
@@ -575,7 +712,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-11T09:50:50+00:00"
+            "time": "2021-02-12T10:47:00+00:00"
         },
         {
             "name": "symfony/finder",
@@ -583,12 +720,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "4adc8d172d602008c204c2e16956f99257248e03"
+                "reference": "0d639a0943822626290d169965804f79400e6a04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/4adc8d172d602008c204c2e16956f99257248e03",
-                "reference": "4adc8d172d602008c204c2e16956f99257248e03",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/0d639a0943822626290d169965804f79400e6a04",
+                "reference": "0d639a0943822626290d169965804f79400e6a04",
                 "shasum": ""
             },
             "require": {
@@ -621,7 +758,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.2.3"
+                "source": "https://github.com/symfony/finder/tree/5.x"
             },
             "funding": [
                 {
@@ -637,7 +774,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-28T22:06:19+00:00"
+            "time": "2021-02-15T18:55:04+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -701,7 +838,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -725,12 +862,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "267a9adeb8ecb8071040a740930e077cdfb987af"
+                "reference": "5601e09b69f26c1828b13b6bb87cb07cddba3170"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/267a9adeb8ecb8071040a740930e077cdfb987af",
-                "reference": "267a9adeb8ecb8071040a740930e077cdfb987af",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/5601e09b69f26c1828b13b6bb87cb07cddba3170",
+                "reference": "5601e09b69f26c1828b13b6bb87cb07cddba3170",
                 "shasum": ""
             },
             "require": {
@@ -783,7 +920,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -799,7 +936,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -807,12 +944,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "6e971c891537eb617a00bb07a43d182a6915faba"
+                "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/6e971c891537eb617a00bb07a43d182a6915faba",
-                "reference": "6e971c891537eb617a00bb07a43d182a6915faba",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/43a0283138253ed1d48d352ab6d0bdb3f809f248",
+                "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248",
                 "shasum": ""
             },
             "require": {
@@ -868,7 +1005,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -884,7 +1021,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T17:09:11+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -892,12 +1029,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
                 "shasum": ""
             },
             "require": {
@@ -949,7 +1086,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -965,7 +1102,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
@@ -1029,7 +1166,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -1113,7 +1250,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -1217,12 +1354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "13c9099cdb470223b5863f7d11d17554b2dc6404"
+                "reference": "6d830fae00e2bb336074eae141bb00db36cd3551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/13c9099cdb470223b5863f7d11d17554b2dc6404",
-                "reference": "13c9099cdb470223b5863f7d11d17554b2dc6404",
+                "url": "https://api.github.com/repos/symfony/string/zipball/6d830fae00e2bb336074eae141bb00db36cd3551",
+                "reference": "6d830fae00e2bb336074eae141bb00db36cd3551",
                 "shasum": ""
             },
             "require": {
@@ -1293,7 +1430,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-26T09:33:05+00:00"
+            "time": "2021-02-17T15:27:35+00:00"
         },
         {
             "name": "symfony/translation",
@@ -1301,12 +1438,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "443e5950687bb25d947ef67a93a322730264c4b1"
+                "reference": "61d3c80b5c106e9e3e21542db7e6a90b2f01250f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/443e5950687bb25d947ef67a93a322730264c4b1",
-                "reference": "443e5950687bb25d947ef67a93a322730264c4b1",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/61d3c80b5c106e9e3e21542db7e6a90b2f01250f",
+                "reference": "61d3c80b5c106e9e3e21542db7e6a90b2f01250f",
                 "shasum": ""
             },
             "require": {
@@ -1323,7 +1460,7 @@
                 "symfony/yaml": "<4.4"
             },
             "provide": {
-                "symfony/translation-implementation": "2.0"
+                "symfony/translation-implementation": "2.3"
             },
             "require-dev": {
                 "psr/log": "~1.0",
@@ -1387,7 +1524,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-05T17:04:25+00:00"
+            "time": "2021-02-17T15:27:35+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -1474,12 +1611,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",
-                "reference": "367afc5864bfdb07508668dc0dfc06e56b6b89d5"
+                "reference": "783f37232c84de337bbc2f0e079020d127efe8fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/validator/zipball/367afc5864bfdb07508668dc0dfc06e56b6b89d5",
-                "reference": "367afc5864bfdb07508668dc0dfc06e56b6b89d5",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/783f37232c84de337bbc2f0e079020d127efe8fa",
+                "reference": "783f37232c84de337bbc2f0e079020d127efe8fa",
                 "shasum": ""
             },
             "require": {
@@ -1578,7 +1715,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-28T22:08:00+00:00"
+            "time": "2021-02-18T22:42:52+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1661,7 +1798,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "propel/propel": 20
+        "propel/propel": 20,
+        "byjg/jwt-session": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

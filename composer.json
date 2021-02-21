@@ -5,11 +5,18 @@
     "autoload": {
         "psr-4":{
             "App\\":"App/"
-        }
+        },
+        "classmap": [
+            "App/Classes/",
+            "App/Classes/Base",
+            "App/Classes/Map"
+        ]
     },
     "minimum-stability": "dev",
     "require": {
         "monolog/monolog":"1.25.1",
-        "propel/propel": "~2.0@dev"
+        "propel/propel": "~2.0@dev",
+        "byjg/jwt-session": "dev-master"
+        
     }
 }

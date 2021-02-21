@@ -3,22 +3,25 @@
     use App\Lib\Response;
     use App\Lib\Router;
     use App\Views;
+    use Classes\User;
 
     class Navi
     {
 
         public static function load()
         {
-             Router::get('/', function(){
+            //  Router::get('/', function(){
                  
-                (new Views\Home())->loadBody();
+            //     (new Views\Home())->loadBody();
                 
-             });
+            //  });
 
-             Router::get('/test', function(){
+            //  Router::get('/test', function(){
                 
-                 (new Views\Test())->loadBody();
-             });
+            //      (new Views\Test())->loadBody();
+            //  });
+
+            echo "C'Mon!";
 
         }
     }

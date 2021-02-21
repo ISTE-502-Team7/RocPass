@@ -25,13 +25,5 @@
         {
             return $this->hashPass = hash('sha256', $pass);
         }
-
-        // function create(){}
-
-        // function read(){}
-
-        // function update(){}
-
-        // function delete(){}
     }
 ?>

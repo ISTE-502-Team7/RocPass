@@ -1,12 +1,29 @@
-<?php
-     
-     require __DIR__.'/vendor/autoload.php';
+<?php namespace App;
 
-     use App\Lib\App;
+     
+
+     include __DIR__.'/vendor/autoload.php';
+     include __DIR__.'/generated-conf/config.php';
+     
+
+     echo __DIR__;
+     use Lib\App;
      use App\Controllers;
 
-     Controllers\Navi::load();      
-     Controllers\Attendee::load();
+     // try
+     // {
+          Controllers\Navi::load();
 
-     App::run();
+                
+          
+          
+     // }
+     // catch(Exception $e)
+     // {
+       //   echo $e->getMessage();
+     // }
+     // finally
+     // {
+          // App::run();
+     // }
 ?>

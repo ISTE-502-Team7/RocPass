@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<database name="default" defaultIdMethod="native" defaultPhpNamingMethod="underscore">
+<database name="default" defaultIdMethod="native" defaultPhpNamingMethod="underscore" namespace="Classes">
   <table name="background" idMethod="native" phpName="Background">
     <column name="age" phpName="Age" type="INTEGER" required="true"/>
     <column name="gender" phpName="Gender" type="BOOLEAN" size="1" required="true"/>
