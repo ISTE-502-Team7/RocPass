@@ -10,16 +10,18 @@
 
         public static function load()
         {
-             Router::get('/', function(){
+            //  Router::get('/', function(){
                  
-                (new Views\Home());
+            //     (new Views\Home())->loadBody();
                 
-             });
+            //  });
 
-             Router::get('/test', function(){
+            //  Router::get('/test', function(){
                 
-                 (new Views\Test());
-             });
+            //      (new Views\Test())->loadBody();
+            //  });
+
+            echo "C'Mon!";
 
         }
     }

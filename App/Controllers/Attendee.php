@@ -32,7 +32,7 @@
 
                     if($req->getBody()['cookingrecipes'] == $_SESSION['add_user_token'])
                     {
-
+                        //Testing
                         $attendee = new User();
                         $attendee->setFirstName($req->getBody()['first_name']);
                         $attendee->setLastName($req->getBody()['last_name']);
@@ -141,7 +141,7 @@
                         $background->setNationality($req->getBody()['nationality']);
                         $background->setDob($req->getBody()['dob']);
                         $background->save();
-                        
+
                         unset($_SESSION['update_attendees_token']);
                     }
 
