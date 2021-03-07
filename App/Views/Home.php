@@ -4,7 +4,7 @@
     {
         public function loadBody()
         {
-            echo "<h1><b>Hello Me!</b></h1>";
+            echo "<h1><b>Hello Home!</b></h1>";
         }
     }
 ?>

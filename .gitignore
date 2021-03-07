@@ -2,3 +2,7 @@ vendor
 logs
 db.json
 propel
+propel.php
+App/Views
+generated-conf
+propel.php.dist

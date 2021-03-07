@@ -1,4 +1,4 @@
-<?php   namespace App\Lib;
+<?php namespace App\Lib;
 
         class Router{
 
@@ -16,6 +16,7 @@
                 if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') !==0){
                     return;
                 }
+                
 
                 self::on($route, $callback);
             }
