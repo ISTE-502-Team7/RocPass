@@ -7,3 +7,4 @@ App/Views
 App/Controllers/Navi.php
 generated-conf
 propel.php.dist
+.DS_Store

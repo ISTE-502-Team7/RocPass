@@ -1,7 +1,7 @@
 <?php
      namespace App\Helpers;
 
-     abstract class Role {
+     class Role {
          
         const Attendee = 3;
 
