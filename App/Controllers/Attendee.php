@@ -32,30 +32,18 @@
                         }
 
                         echo "You got in!";
-                        // $attendee = new User();
-                        // $attendee->setFirstName($req->getBody()['first_name']);
-                        // $attendee->setLastName($req->getBody()['last_name']);
-                        // $attendee->setUsername($req->getBody()['username']);
-                        // $attendee->setPassword(password_hash($req->getBody()['password'],PASSWORD_DEFAULT));
-                        // $attendee->setEmailAddr($req->getBody()['email_addr']);
-                        // $attendee->setRole(Role::Attendee);
-                        // $attendee->save();
+                        $attendee = new User();
+                        $attendee->setFirstName($req->getBody()['first_name']);
+                        $attendee->setLastName($req->getBody()['last_name']);
+                        $attendee->setUsername($req->getBody()['username']);
+                        $attendee->setPassword(password_hash($req->getBody()['password'],PASSWORD_DEFAULT));
+                        $attendee->setEmailAddr($req->getBody()['email_addr']);
+                        $attendee->setRole(Role::Attendee);
+                        $attendee->save();
+
                         
-                        // echo $req->getBody()['username'];
 
-                        // $attendee = UserQuery::create()->findOneByUsername($req->getBody()['username']);
-
-                        // $background = new Background();
-                        // $background->setAge($req->getBody()['age']);
-                        // $background->setGender($req->getBody()['gender']);
-                        // $background->setHouseMembers($req->getBody()['house_members']);
-                        // $background->setZipcode($req->getBody()['zipcode']);
-                        // $background->setNationality($req->getBody()['nationality']);
-                        // $background->setDob($req->getBody()['dob']);
-                        // $background->setUserId($attendee->getPrimaryKey());
-                        // $background->save();
-
-                        unset($_SESSION['add_user_token']);
+                        Token::TokenExpiration('add_user_token');
                 });
                 //End Create
 
@@ -72,7 +60,7 @@
 
                     $background = BackgroundQuery::create()->findOneByUserId($attendee->getPrimaryKey());
 
-                    unset($_SESSION['read_user_token']);
+                    Token::TokenExpiration('read_user_token');
                     
                 });
 
@@ -88,7 +76,7 @@
 
                         echo $attendee->toJSON();
 
-                        unset($_SESSION['load_attendees_token']);
+                        Token::TokenExpiration('load_attendees_token');
                 });
 
                 Router::post('/loadBackgrounds', function(Request $req, Response $res){
@@ -102,7 +90,7 @@
 
                     echo $background->toJSON();
 
-                    unset($_SESSION['load_backgrounds_token']);
+                    Token::TokenExpiration('load_backgrounds_token');
                 });
                 //End Read
 
@@ -130,7 +118,7 @@
                     $background->setDob($req->getBody()['dob']);
                     $background->save();
 
-                    unset($_SESSION['update_attendees_token']);
+                    Token::TokenExpiration('update_attendees_token');
                 });
                 //End Update
 
@@ -146,8 +134,9 @@
                     $attendee = UserQuery::create()->findOneByUsername($req->getBody()['username']);
                     $attendee->delete();
 
-                    unset($_SESSION['delete_attendee_token']);
+                    Token::TokenExpiration('delete_attendee_token');
                 });
+                //End Delete
         }
     }
 

@@ -39,6 +39,11 @@
                 return True;
             }
         }
+
+        public static function TokenExpiration($sessionName)
+        {
+            unset($_SESSION[$sessionName]);
+        }
     }
 
 ?>

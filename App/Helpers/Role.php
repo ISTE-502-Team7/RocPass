@@ -3,9 +3,9 @@
 
      class Role {
          
-        const Attendee = 3;
+        const Attendee = 2;
 
-        const EventCoordinator = 2;
+        const EventCoordinator = 1;
 
         const Admin = 0;
      }
