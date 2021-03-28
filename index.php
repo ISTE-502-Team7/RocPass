@@ -14,7 +14,7 @@
 
      session_start();
 
-     // Controllers\Navi::load();
+     Controllers\Navi::load();
 
      Lib\App::run();
 ?>
