@@ -44,6 +44,16 @@
                         $attendee->setRole(Role::Attendee);
                         $attendee->save();
 
+                        $attendee = UserQuery::create()->findOneByUsername($req->getBody()['username']);
+                        $background = new Background();
+                        $background->setAge($req->getBody()['age']);
+                        $background->setGender($req->getBody()['gender']);
+                        $background->setHouseMembers($req->getBody()['housemems']);
+                        $background->setZipcode($req->getBody()['zipcode']);
+                        $background->setNationality($req->getBody()['nationality']);
+                        $background->setDob($req->getBody()['dob']);
+                        $background->setUserId($attendee->getPrimaryKey());
+                        $background->save();
                         
 
                         Token::TokenExpiration('add_user_token');
