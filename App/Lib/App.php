@@ -5,7 +5,6 @@
     {
         public static function run()
         {
-            Controllers\Navi::load();
             Controllers\Attendee::load();
             Controllers\Redirect::load();
             Logger::enableSystemLogs();

@@ -18,7 +18,7 @@
         public static function load()
         {
             //Begin Create
-            Router::post('/addVenue', function(Request $req, Respponse $res){
+            Router::post('/addVenue', function(Request $req, Response $res){
 
                 if(!Token::TokenMatching('add_venue_token'))
                 {
@@ -106,7 +106,73 @@
 
                 Token::TokenExpiration('load_imgs_token');
             });
+            //End Read
 
+            //Begin Update
+            Router::post('/updateVenue',function(Request $req, Response $res){
+
+                if(!Token::TokenMatching('upate_venue_token'))
+                {
+                    return " ";
+                }
+
+                $venue = VenueQuery::create()->findOneByName($req->getBody()['name']);
+                $venue->setName($req->getBody()['newName']);
+                $venue->setAddress($req->getBody()['address']);
+                $venue->setParkingInfo($req->getBody()['parkingInfo']);
+                $venue->save();
+
+                Token::TokenExpiration('update_venue_token');
+            });
+
+
+            Router::post('/updateVenueImg', function(Request $req, Response $res){
+
+                if(!Token::TokenMatching('update_venueImg_token'))
+                {
+                    return " ";
+                }
+
+                $venueImg = VenueImageQuery::create()->findOneByName($req->getBody()['name']);
+                $venueImg->setName($req->getBody()['name']);
+                $venueImg->setPath($req->getBody()['name']);
+                $venueImg->save();
+
+                Token::TokenExpiration('update_venueImg_token');
+            });
+            //End Update
+
+            //Begin Delete
+            Router::post('/deleteVenue', function(Request $req, Response $res){
+
+                if(!Token::TokenMatching('delete_venue_token'))
+                {
+                    return " ";
+                }
+
+                $venue = VenueQuery::create()->findOneByName($req->getBody()['name']);
+                $venue->delete();
+
+                echo "Success";
+
+                Token::TokenExpiration('delete_venue_token');
+            });
+
+            Router::post('/deleteVenueImg', function(Request $req, Response $res){
+
+                if(!Token::TokenMatching('delete_venueImg_token'))
+                {
+                    return " ";
+                }
+
+                $venueImg = VenueImageQuery::create()->findOneByName($req->getBody()['name']);
+                $venueImg->save();
+
+                echo "Success";
+
+                Token::TokenExpiration('delete_venueImg_token');
+            });
+            //End Delete
         }
     }
 ?>

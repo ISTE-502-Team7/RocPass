@@ -8,13 +8,13 @@
 
         public static function load()
         {
-             Router::get('/', function(){
+             Router::get('/test', function(){
                  
                 (new Views\Home())->loadBody();
                 
              });
 
-             Router::get('/test', function(){
+             Router::get('/', function(){
                 
                  (new Views\Test())->loadBody();
              });

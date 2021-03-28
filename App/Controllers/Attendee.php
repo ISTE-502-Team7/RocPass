@@ -8,12 +8,15 @@
     use App\Lib\Request;
     use App\Lib\Response;
     use App\Lib\Router;
+    use Classes\Pass;
+    use Classes\PassQuery;
     use Classes\User;
     use Classes\Background;
     use Classes\BackgroundQuery;
     use App\Helpers\Role;
     use Classes\UserQuery;
     use App\Helpers\Token;
+    use App\Helpers\TypePass;
     
     
 
@@ -44,6 +47,22 @@
                         
 
                         Token::TokenExpiration('add_user_token');
+                });
+
+                Router::post('addPass', function(Request $req, Response $res){
+
+                    if(!Token::TokenMatching('add_pass_token'))
+                    {
+                        return " ";
+                    }
+
+                    $attendee = UserQuery::create()->findOneByUsername($req->getBody()['username']);
+                    $pass = new Pass();
+                    $pass->setTypePass($req->getBody()['typepass']);
+                    $pass->setQrCode($req->getBody()['qrcode']);
+                    $pass->setUserId($attendee->getPrimaryKey());
+
+                    Token::TokenExpiration('add_pass_token');
                 });
                 //End Create
 
@@ -91,6 +110,21 @@
                     echo $background->toJSON();
 
                     Token::TokenExpiration('load_backgrounds_token');
+                });
+
+                Router::post('/readPass', function(Request $req, Response $res){
+                    
+                    if(!Token::TokenMatching('read_pass_token'))
+                    {
+                        return " ";
+                    }
+
+                    $attendee = UserQuery::create()->findOneByUsername($req->getBody()['username']);
+                    $pass = PassQuery::create()->findOneByUserId($attendee->getPrimaryKey());
+
+                    echo $pass;
+
+                    Token::TokenExpiration('read_pass_token');
                 });
                 //End Read
 

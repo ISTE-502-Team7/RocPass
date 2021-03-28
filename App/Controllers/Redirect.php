@@ -16,10 +16,7 @@
         public static function load()
         {   
 
-            Router::get("/addAttendee", function(){
-
-                header("Location: /");
-            });
+            
         }
     }
 ?>

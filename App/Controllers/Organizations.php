@@ -10,7 +10,7 @@
     use Classes\UserQuery;
     use App\Helpers\Token;
 
-    class Organiztion
+    class Organizations
     {
         public static function load()
         {
@@ -79,6 +79,8 @@
 
                 $orgUser = UserQuery::create()->findOneByUsername($req->getBody()['username']);
                 $org = OrganizationQuery::create()->findOneByUserId($orgUser->getPrimaryKey());
+                $org->setName($req->getBody()['name']);
+                $org->save();
 
                 Token::TokenExpiration('load_orgs_token');
             });
@@ -94,6 +96,8 @@
 
                 $orgUser = UserQuery::create()->findOneByUsername($req->getBody()['username']);
                 $orgUser->delete();
+
+                echo "Success";
 
                 Token::TokenExpiration('delete_org_token');
             });

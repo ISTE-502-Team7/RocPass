@@ -20,6 +20,11 @@
 
         public static function TokenMatching($sessionName)
         {
+            if(!constant("ANTI-CSRF"))
+            {
+                return true;   
+            }
+
             if(!isset($_POST['cookingrecipes']) || !isset($_SESSION[$sessionName]))
             {
                 Lib\Logger::potentialAttacks();
